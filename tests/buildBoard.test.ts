@@ -8,28 +8,15 @@ describe("buildFreshBoard", () => {
     expect(board.prizes).toHaveLength(9);
   });
 
-  it("always assigns the final prize (Team Outing) to task 9", () => {
-    for (let i = 0; i < 20; i++) {
-      const board = buildFreshBoard();
-      const task9 = board.tasks.find((t) => t.number === 9)!;
-      const prize = board.prizes.find((p) => p.id === task9.prizeId)!;
-      expect(prize.isFinalPrize).toBe(true);
-      expect(prize.name).toBe("Team Outing");
-    }
-  });
-
-  it("assigns each of the 8 non-final prizes to exactly one of tasks 1-8, with no duplicates", () => {
+  it("assigns each of the 9 prizes to exactly one task, with no duplicates and no task special-cased", () => {
     const board = buildFreshBoard();
-    const nonFinalTasks = board.tasks.filter((t) => t.number !== 9);
-    const assignedIds = nonFinalTasks.map((t) => t.prizeId);
+    const assignedIds = board.tasks.map((t) => t.prizeId);
 
-    expect(assignedIds).toHaveLength(8);
-    expect(new Set(assignedIds).size).toBe(8); // no duplicates
+    expect(assignedIds).toHaveLength(9);
+    expect(new Set(assignedIds).size).toBe(9); // no duplicates
 
-    const nonFinalPrizeIds = board.prizes
-      .filter((p) => !p.isFinalPrize)
-      .map((p) => p.id);
-    expect([...assignedIds].sort()).toEqual([...nonFinalPrizeIds].sort());
+    const prizeIds = board.prizes.map((p) => p.id);
+    expect([...assignedIds].sort()).toEqual([...prizeIds].sort());
   });
 
   it("starts every task In Progress and unrevealed", () => {
@@ -52,5 +39,15 @@ describe("buildFreshBoard", () => {
       assignments.add(key);
     }
     expect(assignments.size).toBeGreaterThan(1);
+  });
+
+  it("can assign any prize to task 9 across repeated calls (no task is special-cased)", () => {
+    const prizesSeenOnTask9 = new Set<string>();
+    for (let i = 0; i < 40; i++) {
+      const board = buildFreshBoard();
+      const task9 = board.tasks.find((t) => t.number === 9)!;
+      prizesSeenOnTask9.add(task9.prizeId);
+    }
+    expect(prizesSeenOnTask9.size).toBeGreaterThan(1);
   });
 });

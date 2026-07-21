@@ -1,5 +1,5 @@
 import type { PublicPrize } from "@/types/board";
-import { CheckIcon, LockIcon, TrophyIcon } from "@/components/icons";
+import { CheckIcon, LockIcon } from "@/components/icons";
 
 interface PrizePoolProps {
   prizes: PublicPrize[];
@@ -25,9 +25,7 @@ export function PrizePool({ prizes }: PrizePoolProps) {
             key={prize.id}
             className={`flex items-start gap-3 rounded-xl border p-3.5 ${
               prize.revealed
-                ? prize.isFinalPrize
-                  ? "border-celebrate-300 bg-celebrate-50 dark:border-celebrate-700 dark:bg-celebrate-900/30"
-                  : "border-brand-200 bg-brand-50 dark:border-brand-700 dark:bg-brand-900/20"
+                ? "border-brand-200 bg-brand-50 dark:border-brand-700 dark:bg-brand-900/20"
                 : "border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-800/60"
             }`}
           >
@@ -38,9 +36,7 @@ export function PrizePool({ prizes }: PrizePoolProps) {
                   : "bg-slate-200 text-slate-500 dark:bg-slate-700 dark:text-slate-400"
               }`}
             >
-              {prize.isFinalPrize ? (
-                <TrophyIcon className="h-4.5 w-4.5" />
-              ) : prize.revealed ? (
+              {prize.revealed ? (
                 <CheckIcon className="h-4.5 w-4.5" />
               ) : (
                 <LockIcon className="h-4.5 w-4.5" />
@@ -54,7 +50,7 @@ export function PrizePool({ prizes }: PrizePoolProps) {
                     : "text-slate-600 dark:text-slate-300"
                 }`}
               >
-                {prize.isFinalPrize ? "Team Outing — details selected by the team." : prize.name}
+                {prize.name}
               </p>
               {prize.description && (
                 <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">

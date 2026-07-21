@@ -32,7 +32,6 @@ function toPublicPrize(prize: RawPrize, tasks: RawTask[]): PublicPrize {
     id: prize.id,
     name: prize.name,
     description: prize.description,
-    isFinalPrize: prize.isFinalPrize,
     revealed: Boolean(owningTask?.revealed),
     revealedAt: owningTask?.revealed ? owningTask.revealedAt : null,
   };

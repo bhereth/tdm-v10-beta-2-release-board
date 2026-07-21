@@ -50,7 +50,7 @@ describe("shapeBoardState", () => {
     const state = shapeBoardState(board);
     for (const prize of state.prizes) {
       expect(Object.keys(prize).sort()).toEqual(
-        ["description", "id", "isFinalPrize", "name", "revealed", "revealedAt"].sort()
+        ["description", "id", "name", "revealed", "revealedAt"].sort()
       );
     }
   });

@@ -18,23 +18,9 @@ const STATUS_LABEL: Record<TaskStatusValue, string> = {
 };
 
 export function TaskCard({ task, celebrate }: TaskCardProps) {
-  const isFinalTask = task.number === 9;
-
   const cardBody = task.revealed ? (
-    <div
-      className={`flex h-full flex-col items-center justify-center rounded-2xl border p-5 text-center ${
-        isFinalTask
-          ? "border-celebrate-300 bg-celebrate-50 dark:border-celebrate-700 dark:bg-celebrate-900/30"
-          : "border-brand-200 bg-brand-50 dark:border-brand-700 dark:bg-brand-900/30"
-      }`}
-    >
-      <span
-        className={`mb-2 inline-flex h-11 w-11 items-center justify-center rounded-full ${
-          isFinalTask
-            ? "bg-celebrate-200 text-celebrate-800 dark:bg-celebrate-800 dark:text-celebrate-100"
-            : "bg-brand-200 text-brand-800 dark:bg-brand-800 dark:text-brand-100"
-        }`}
-      >
+    <div className="flex h-full flex-col items-center justify-center rounded-2xl border border-brand-200 bg-brand-50 p-5 text-center dark:border-brand-700 dark:bg-brand-900/30">
+      <span className="mb-2 inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand-200 text-brand-800 dark:bg-brand-800 dark:text-brand-100">
         <GiftIcon className="h-6 w-6" />
       </span>
       <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">

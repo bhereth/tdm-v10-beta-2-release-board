@@ -25,7 +25,6 @@ export interface RawPrize {
   id: string;
   name: string;
   description: string;
-  isFinalPrize: boolean;
 }
 
 export interface BoardData {
@@ -61,7 +60,6 @@ export interface PublicPrize {
   id: string;
   name: string;
   description: string;
-  isFinalPrize: boolean;
   revealed: boolean;
   revealedAt: string | null;
 }

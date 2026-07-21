@@ -3,7 +3,8 @@
 A friendly, professional team progress board for a beta release. Nine task
 cards sit in a 3×3 grid; as the team finishes work, whoever maintains this
 repo marks a task "Ready to Reveal" and then reveals it, unlocking a hidden
-team prize. The final task always unlocks the grand prize: a team outing.
+team prize. Which prize sits behind which task is randomized once and then
+fixed — no task is treated as more special than any other.
 
 This is a **fully static site** — there is no server, no database, and no
 login. The board's state (which tasks are done, which prizes are revealed)
@@ -60,10 +61,10 @@ board. There's no separate login step to configure.
   requirement — the file is plain JSON and fully hand-editable.
 - **Randomization happens once, locally, not on every build.** `npm run
   board -- init` (and `reset`) calls `buildFreshBoard()`
-  (`src/lib/buildBoard.ts`), which shuffles the eight non-final prizes
-  across Tasks 1–8 and always assigns the Team Outing to Task 9. The
-  *result* is what gets committed; rebuilding the site never re-shuffles
-  anything, because the build just reads the committed file as-is.
+  (`src/lib/buildBoard.ts`), which shuffles all nine prizes across all nine
+  tasks — no task or prize is special-cased. The *result* is what gets
+  committed; rebuilding the site never re-shuffles anything, because the
+  build just reads the committed file as-is.
 - **Celebration state lives in `localStorage`, not a server.** Since a
   static page can be reloaded any number of times after a reveal, `Board`
   (`src/components/Board.tsx`) records each reveal's timestamp in the
@@ -123,23 +124,21 @@ variables, no database, no OAuth app to register.
 - After any of the above, commit `src/data/board.json` and push to `main`
   — the site rebuilds and redeploys automatically.
 
-To change the *initial* placeholder names/descriptions/icons that `init`/
-`reset` generate, edit `src/lib/constants.ts` (`INITIAL_TASKS`,
-`INITIAL_PRIZES`, `DEFAULT_MYSTERY_PERK_OPTIONS`).
-
-Task 9 always receives the final prize (`isFinalPrize: true` in
-`INITIAL_PRIZES`, currently "Team Outing") — enforced in
-`buildFreshBoard()`, not just by list ordering.
+To change the tasks/prizes that `init`/`reset` generate, edit
+`src/lib/constants.ts` (`INITIAL_TASKS`, `INITIAL_PRIZES`,
+`DEFAULT_MYSTERY_PERK_OPTIONS`). There are nine tasks and nine prizes;
+`buildFreshBoard()` shuffles all nine prizes across all nine tasks with no
+task or prize treated as special.
 
 ## Initializing and resetting the board
 
 - **Initializing:** `npm run board -- init` creates `src/data/board.json`
-  with the nine placeholder tasks and a fresh random prize assignment
-  (Task 9 always gets the Team Outing). It refuses to overwrite an
-  existing file unless you pass `--yes`.
+  with the nine tasks from `constants.ts` and a fresh random prize
+  assignment. It refuses to overwrite an existing file unless you pass
+  `--yes`.
 - **Resetting:** `npm run board -- reset --yes` wipes all progress and
-  re-randomizes the Tasks 1–8 prize assignment (Task 9 always keeps the
-  Team Outing). Commit and push the result to publish the reset board.
+  re-randomizes the prize assignment across all nine tasks. Commit and
+  push the result to publish the reset board.
 
 ## Deployment (GitHub Pages)
 
@@ -176,9 +175,10 @@ npm run test:watch  # watch mode
 - `shuffle.test.ts` — the Fisher-Yates shuffle produces a true permutation
   and doesn't mutate its input.
 - `buildBoard.test.ts` — a freshly built board always has 9 tasks/9 prizes,
-  Task 9 always gets the Team Outing, the other 8 prizes are assigned
-  exactly once with no duplicates, and repeated calls actually produce
-  different orderings (it's really randomized).
+  each prize is assigned exactly once with no duplicates and no task
+  special-cased (any task can land any prize, including task 9), and
+  repeated calls actually produce different orderings (it's really
+  randomized).
 - `boardMutations.test.ts` — status can move between In Progress and Ready
   to Reveal (and back) until a task is revealed, after which status is
   locked; revealing requires Ready to Reveal first; revealing twice is a

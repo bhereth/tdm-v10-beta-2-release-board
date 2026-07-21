@@ -5,18 +5,8 @@
   "tasks": [
     {
       "number": 1,
-      "name": "Task 1",
-      "description": "",
-      "icon": "flag",
-      "status": "IN_PROGRESS",
-      "revealed": false,
-      "revealedAt": null,
-      "prizeId": "extended-lunch"
-    },
-    {
-      "number": 2,
-      "name": "Task 2",
-      "description": "",
+      "name": "Review life cycle",
+      "description": "Assignees: Andywfrc, jlillywhiteMAG",
       "icon": "checklist",
       "status": "IN_PROGRESS",
       "revealed": false,
@@ -24,20 +14,30 @@
       "prizeId": "afternoon-treat"
     },
     {
-      "number": 3,
-      "name": "Task 3",
-      "description": "",
-      "icon": "bug",
+      "number": 2,
+      "name": "Implement preliminary phased RTP project network (WFRC)",
+      "description": "Assignees: SuzieSwim",
+      "icon": "flag",
       "status": "IN_PROGRESS",
       "revealed": false,
       "revealedAt": null,
       "prizeId": "team-trivia-break"
     },
     {
+      "number": 3,
+      "name": "Implement preliminary phased RTP project network (MAG)",
+      "description": "Assignees: jlillywhiteMAG",
+      "icon": "flag",
+      "status": "IN_PROGRESS",
+      "revealed": false,
+      "revealedAt": null,
+      "prizeId": "extended-lunch"
+    },
+    {
       "number": 4,
-      "name": "Task 4",
-      "description": "",
-      "icon": "shield",
+      "name": "Calibrate CVM",
+      "description": "Assignees: Andywfrc",
+      "icon": "wrench",
       "status": "IN_PROGRESS",
       "revealed": false,
       "revealedAt": null,
@@ -45,8 +45,8 @@
     },
     {
       "number": 5,
-      "name": "Task 5",
-      "description": "",
+      "name": "Create preliminary socioeconomic forecast (MAG)",
+      "description": "Assignees: jlillywhiteMAG",
       "icon": "book",
       "status": "IN_PROGRESS",
       "revealed": false,
@@ -55,9 +55,9 @@
     },
     {
       "number": 6,
-      "name": "Task 6",
-      "description": "",
-      "icon": "wrench",
+      "name": "Create draft socioeconomic forecast (WFRC)",
+      "description": "Assignees: joshua-reynolds",
+      "icon": "book",
       "status": "IN_PROGRESS",
       "revealed": false,
       "revealedAt": null,
@@ -65,8 +65,18 @@
     },
     {
       "number": 7,
-      "name": "Task 7",
-      "description": "",
+      "name": "Final beta calibration and validation",
+      "description": "Assignees: bhereth",
+      "icon": "shield",
+      "status": "IN_PROGRESS",
+      "revealed": false,
+      "revealedAt": null,
+      "prizeId": "candy-bowl-restock"
+    },
+    {
+      "number": 8,
+      "name": "Include summary post processing for Benefit-Cost Analysis pipeline",
+      "description": "Assignees: cday97, ar-puuk · Priority: High",
       "icon": "chat",
       "status": "IN_PROGRESS",
       "revealed": false,
@@ -74,80 +84,61 @@
       "prizeId": "choose-the-next-team-treat"
     },
     {
-      "number": 8,
-      "name": "Task 8",
-      "description": "",
-      "icon": "rocket",
-      "status": "IN_PROGRESS",
-      "revealed": false,
-      "revealedAt": null,
-      "prizeId": "bonus-break"
-    },
-    {
       "number": 9,
-      "name": "Final Beta Release",
-      "description": "",
+      "name": "Add voyager scripts to summarize highway network, OD Matrix, and SE for BCA",
+      "description": "Assignees: ar-puuk",
       "icon": "trophy",
       "status": "IN_PROGRESS",
       "revealed": false,
       "revealedAt": null,
-      "prizeId": "team-outing"
+      "prizeId": "bonus-break"
     }
   ],
   "prizes": [
     {
       "id": "snack-cart",
       "name": "Snack Cart",
-      "description": "A small selection of snacks for the team.",
-      "isFinalPrize": false
+      "description": "A small selection of snacks for the team."
     },
     {
       "id": "coffee-or-drink-run",
       "name": "Coffee or Drink Run",
-      "description": "Basic coffee, soda, tea, or another simple drink for each team member.",
-      "isFinalPrize": false
+      "description": "Basic coffee, soda, tea, or another simple drink for each team member."
     },
     {
       "id": "afternoon-treat",
       "name": "Afternoon Treat",
-      "description": "Cookies, donuts, brownies, ice cream, or a similar shared treat.",
-      "isFinalPrize": false
+      "description": "Cookies, donuts, brownies, ice cream, or a similar shared treat."
     },
     {
       "id": "bonus-break",
       "name": "Bonus Break",
-      "description": "A scheduled 20-minute team break.",
-      "isFinalPrize": false
+      "description": "A scheduled 20-minute team break."
     },
     {
       "id": "extended-lunch",
       "name": "Extended Lunch",
-      "description": "A slightly longer team lunch, subject to office approval.",
-      "isFinalPrize": false
+      "description": "A slightly longer team lunch, subject to office approval."
     },
     {
       "id": "team-trivia-break",
       "name": "Team Trivia Break",
-      "description": "A short office-friendly trivia game.",
-      "isFinalPrize": false
+      "description": "A short office-friendly trivia game."
     },
     {
       "id": "choose-the-next-team-treat",
       "name": "Choose the Next Team Treat",
-      "description": "The team member most closely associated with the completed task chooses the next simple shared treat.",
-      "isFinalPrize": false
+      "description": "The team member most closely associated with the completed task chooses the next simple shared treat."
     },
     {
       "id": "mystery-office-perk",
       "name": "Mystery Office Perk",
-      "description": "One small preapproved perk selected from a short list.",
-      "isFinalPrize": false
+      "description": "One small preapproved perk selected from a short list."
     },
     {
-      "id": "team-outing",
-      "name": "Team Outing",
-      "description": "The final reward, unlocked by Task 9.",
-      "isFinalPrize": true
+      "id": "candy-bowl-restock",
+      "name": "Candy Bowl Restock",
+      "description": "Restocking the office candy bowl with a fresh selection."
     }
   ],
   "mysteryPerkOptions": [
