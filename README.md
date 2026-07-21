@@ -84,7 +84,7 @@ scripts/board.ts            CLI: init / reset / status / reveal / show
 src/lib/buildBoard.ts       Builds a fresh, randomized board (used by init/reset)
 src/lib/boardMutations.ts   Pure status/reveal transitions + their invariants
 src/lib/boardData.ts        Reads board.json and masks unrevealed prizes for rendering
-src/lib/constants.ts        Initial task/prize placeholders
+src/lib/constants.ts        The task list and prize pool used by init/reset
 src/app/page.tsx            The (statically rendered) page
 src/components/**           UI: Header, TaskCard, PrizePool, CompletionBanner, Confetti
 tests/**                    Vitest tests for the logic above

@@ -6,7 +6,7 @@
     {
       "number": 1,
       "name": "Review life cycle",
-      "description": "Assignees: Andywfrc, jlillywhiteMAG",
+      "description": "",
       "icon": "checklist",
       "status": "IN_PROGRESS",
       "revealed": false,
@@ -16,7 +16,7 @@
     {
       "number": 2,
       "name": "Implement preliminary phased RTP project network (WFRC)",
-      "description": "Assignees: SuzieSwim",
+      "description": "",
       "icon": "flag",
       "status": "IN_PROGRESS",
       "revealed": false,
@@ -26,7 +26,7 @@
     {
       "number": 3,
       "name": "Implement preliminary phased RTP project network (MAG)",
-      "description": "Assignees: jlillywhiteMAG",
+      "description": "",
       "icon": "flag",
       "status": "IN_PROGRESS",
       "revealed": false,
@@ -36,7 +36,7 @@
     {
       "number": 4,
       "name": "Calibrate CVM",
-      "description": "Assignees: Andywfrc",
+      "description": "",
       "icon": "wrench",
       "status": "IN_PROGRESS",
       "revealed": false,
@@ -46,7 +46,7 @@
     {
       "number": 5,
       "name": "Create preliminary socioeconomic forecast (MAG)",
-      "description": "Assignees: jlillywhiteMAG",
+      "description": "",
       "icon": "book",
       "status": "IN_PROGRESS",
       "revealed": false,
@@ -56,7 +56,7 @@
     {
       "number": 6,
       "name": "Create draft socioeconomic forecast (WFRC)",
-      "description": "Assignees: joshua-reynolds",
+      "description": "",
       "icon": "book",
       "status": "IN_PROGRESS",
       "revealed": false,
@@ -66,7 +66,7 @@
     {
       "number": 7,
       "name": "Final beta calibration and validation",
-      "description": "Assignees: bhereth",
+      "description": "",
       "icon": "shield",
       "status": "IN_PROGRESS",
       "revealed": false,
@@ -76,7 +76,7 @@
     {
       "number": 8,
       "name": "Include summary post processing for Benefit-Cost Analysis pipeline",
-      "description": "Assignees: cday97, ar-puuk · Priority: High",
+      "description": "",
       "icon": "chat",
       "status": "IN_PROGRESS",
       "revealed": false,
@@ -86,7 +86,7 @@
     {
       "number": 9,
       "name": "Add voyager scripts to summarize highway network, OD Matrix, and SE for BCA",
-      "description": "Assignees: ar-puuk",
+      "description": "",
       "icon": "trophy",
       "status": "IN_PROGRESS",
       "revealed": false,
