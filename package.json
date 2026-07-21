@@ -1,0 +1,35 @@
+{
+  "name": "tdm-v10-beta-2-release-board",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Beta Release Challenge — a static team progress board with task cards and hidden prizes, updated by committing changes to src/data/board.json.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "board": "tsx scripts/board.ts"
+  },
+  "dependencies": {
+    "next": "15.5.21",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "19.0.7",
+    "@types/react-dom": "19.0.3",
+    "@eslint/eslintrc": "3.2.0",
+    "autoprefixer": "10.4.20",
+    "eslint": "9.39.5",
+    "eslint-config-next": "15.5.21",
+    "postcss": "8.4.49",
+    "tailwindcss": "3.4.19",
+    "tsx": "4.23.1",
+    "typescript": "5.9.3",
+    "vitest": "4.1.10"
+  }
+}

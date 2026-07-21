@@ -1,0 +1,163 @@
+{
+  "title": "Beta Release Challenge",
+  "subtitle": "Complete the nine tasks, reveal the rewards, and ship the beta.",
+  "releaseName": null,
+  "tasks": [
+    {
+      "number": 1,
+      "name": "Task 1",
+      "description": "",
+      "icon": "flag",
+      "status": "IN_PROGRESS",
+      "revealed": false,
+      "revealedAt": null,
+      "prizeId": "extended-lunch"
+    },
+    {
+      "number": 2,
+      "name": "Task 2",
+      "description": "",
+      "icon": "checklist",
+      "status": "IN_PROGRESS",
+      "revealed": false,
+      "revealedAt": null,
+      "prizeId": "afternoon-treat"
+    },
+    {
+      "number": 3,
+      "name": "Task 3",
+      "description": "",
+      "icon": "bug",
+      "status": "IN_PROGRESS",
+      "revealed": false,
+      "revealedAt": null,
+      "prizeId": "team-trivia-break"
+    },
+    {
+      "number": 4,
+      "name": "Task 4",
+      "description": "",
+      "icon": "shield",
+      "status": "IN_PROGRESS",
+      "revealed": false,
+      "revealedAt": null,
+      "prizeId": "coffee-or-drink-run"
+    },
+    {
+      "number": 5,
+      "name": "Task 5",
+      "description": "",
+      "icon": "book",
+      "status": "IN_PROGRESS",
+      "revealed": false,
+      "revealedAt": null,
+      "prizeId": "mystery-office-perk"
+    },
+    {
+      "number": 6,
+      "name": "Task 6",
+      "description": "",
+      "icon": "wrench",
+      "status": "IN_PROGRESS",
+      "revealed": false,
+      "revealedAt": null,
+      "prizeId": "snack-cart"
+    },
+    {
+      "number": 7,
+      "name": "Task 7",
+      "description": "",
+      "icon": "chat",
+      "status": "IN_PROGRESS",
+      "revealed": false,
+      "revealedAt": null,
+      "prizeId": "choose-the-next-team-treat"
+    },
+    {
+      "number": 8,
+      "name": "Task 8",
+      "description": "",
+      "icon": "rocket",
+      "status": "IN_PROGRESS",
+      "revealed": false,
+      "revealedAt": null,
+      "prizeId": "bonus-break"
+    },
+    {
+      "number": 9,
+      "name": "Final Beta Release",
+      "description": "",
+      "icon": "trophy",
+      "status": "IN_PROGRESS",
+      "revealed": false,
+      "revealedAt": null,
+      "prizeId": "team-outing"
+    }
+  ],
+  "prizes": [
+    {
+      "id": "snack-cart",
+      "name": "Snack Cart",
+      "description": "A small selection of snacks for the team.",
+      "isFinalPrize": false
+    },
+    {
+      "id": "coffee-or-drink-run",
+      "name": "Coffee or Drink Run",
+      "description": "Basic coffee, soda, tea, or another simple drink for each team member.",
+      "isFinalPrize": false
+    },
+    {
+      "id": "afternoon-treat",
+      "name": "Afternoon Treat",
+      "description": "Cookies, donuts, brownies, ice cream, or a similar shared treat.",
+      "isFinalPrize": false
+    },
+    {
+      "id": "bonus-break",
+      "name": "Bonus Break",
+      "description": "A scheduled 20-minute team break.",
+      "isFinalPrize": false
+    },
+    {
+      "id": "extended-lunch",
+      "name": "Extended Lunch",
+      "description": "A slightly longer team lunch, subject to office approval.",
+      "isFinalPrize": false
+    },
+    {
+      "id": "team-trivia-break",
+      "name": "Team Trivia Break",
+      "description": "A short office-friendly trivia game.",
+      "isFinalPrize": false
+    },
+    {
+      "id": "choose-the-next-team-treat",
+      "name": "Choose the Next Team Treat",
+      "description": "The team member most closely associated with the completed task chooses the next simple shared treat.",
+      "isFinalPrize": false
+    },
+    {
+      "id": "mystery-office-perk",
+      "name": "Mystery Office Perk",
+      "description": "One small preapproved perk selected from a short list.",
+      "isFinalPrize": false
+    },
+    {
+      "id": "team-outing",
+      "name": "Team Outing",
+      "description": "The final reward, unlocked by Task 9.",
+      "isFinalPrize": true
+    }
+  ],
+  "mysteryPerkOptions": [
+    "Donuts the next morning",
+    "Fifteen-minute outdoor break",
+    "Casual dress day",
+    "Team chooses a lunch location",
+    "Shorten one routine internal meeting",
+    "Popcorn or snack break",
+    "Breakfast treats",
+    "Small desk-friendly team game"
+  ]
+}
