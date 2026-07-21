@@ -96,59 +96,55 @@
   ],
   "prizes": [
     {
-      "id": "snack-cart",
-      "name": "Snack Cart",
-      "description": "A small selection of snacks for the team."
+      "id": "Prize 1",
+      "name": "",
+      "description": ""
     },
     {
-      "id": "coffee-or-drink-run",
-      "name": "Coffee or Drink Run",
-      "description": "Basic coffee, soda, tea, or another simple drink for each team member."
+      "id": "Prize 1",
+      "name": "",
+      "description": ""
     },
     {
-      "id": "afternoon-treat",
-      "name": "Afternoon Treat",
-      "description": "Cookies, donuts, brownies, ice cream, or a similar shared treat."
+      "id": "Prize 2",
+      "name": "",
+      "description": ""
     },
     {
-      "id": "bonus-break",
-      "name": "Bonus Break",
-      "description": "A scheduled 20-minute team break."
+      "id": "Prize 3",
+      "name": "",
+      "description": ""
     },
     {
-      "id": "extended-lunch",
-      "name": "Extended Lunch",
-      "description": "A slightly longer team lunch, subject to office approval."
+      "id": "Prize 4",
+      "name": "",
+      "description": ""
     },
     {
-      "id": "team-trivia-break",
-      "name": "Team Trivia Break",
-      "description": "A short office-friendly trivia game."
+      "id": "Prize 5",
+      "name": "",
+      "description": ""
     },
     {
-      "id": "choose-the-next-team-treat",
-      "name": "Choose the Next Team Treat",
-      "description": "The team member most closely associated with the completed task chooses the next simple shared treat."
+      "id": "Prize 6",
+      "name": "",
+      "description": ""
     },
     {
-      "id": "mystery-office-perk",
-      "name": "Mystery Office Perk",
-      "description": "One small preapproved perk selected from a short list."
+      "id": "Prize 7",
+      "name": "",
+      "description": ""
     },
     {
-      "id": "candy-bowl-restock",
-      "name": "Candy Bowl Restock",
-      "description": "Restocking the office candy bowl with a fresh selection."
+      "id": "Prize 8",
+      "name": "",
+      "description": ""
+    },
+    {
+      "id": "Prize 9",
+      "name": "",
+      "description": ""
     }
   ],
-  "mysteryPerkOptions": [
-    "Donuts the next morning",
-    "Fifteen-minute outdoor break",
-    "Casual dress day",
-    "Team chooses a lunch location",
-    "Shorten one routine internal meeting",
-    "Popcorn or snack break",
-    "Breakfast treats",
-    "Small desk-friendly team game"
-  ]
+  "mysteryPerkOptions": []
 }
