@@ -6,10 +6,15 @@ import { Confetti } from "@/components/Confetti";
 
 interface TaskCardProps {
   task: PublicTask;
-  /** True for a brief moment after this visitor's first-ever view of this
-   * task in its revealed state — plays the flip animation and a small
-   * confetti burst once, then never again on this device. */
+  /** True once this task is revealed in the data AND this visitor has
+   * clicked the tile on this device to open it. Until then, a revealed
+   * task still renders as an unopened "tap to reveal" tile. */
+  isOpen: boolean;
+  /** True for a brief moment right after the tile is opened — plays the
+   * flip animation and a small confetti burst once, then never again. */
   celebrate: boolean;
+  /** Called when the visitor clicks a revealed-but-unopened tile. */
+  onOpen: () => void;
 }
 
 const STATUS_LABEL: Record<TaskStatusValue, string> = {
@@ -17,8 +22,8 @@ const STATUS_LABEL: Record<TaskStatusValue, string> = {
   READY_TO_REVEAL: "Ready to Reveal",
 };
 
-export function TaskCard({ task, celebrate }: TaskCardProps) {
-  const cardBody = task.revealed ? (
+export function TaskCard({ task, isOpen, celebrate, onOpen }: TaskCardProps) {
+  const cardBody = task.revealed && isOpen ? (
     <div className="flex h-full flex-col items-center justify-center rounded-2xl border border-brand-200 bg-brand-50 p-5 text-center dark:border-brand-700 dark:bg-brand-900/30">
       <span className="mb-2 inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand-200 text-brand-800 dark:bg-brand-800 dark:text-brand-100">
         <GiftIcon className="h-6 w-6" />
@@ -39,6 +44,22 @@ export function TaskCard({ task, celebrate }: TaskCardProps) {
         Completed
       </span>
     </div>
+  ) : task.revealed ? (
+    <button
+      type="button"
+      onClick={onOpen}
+      className="flex h-full w-full flex-col items-center justify-center rounded-2xl border-2 border-dashed border-celebrate-300 bg-celebrate-50 p-5 text-center transition hover:border-celebrate-400 hover:bg-celebrate-100 dark:border-celebrate-700 dark:bg-celebrate-900/20 dark:hover:bg-celebrate-900/30"
+    >
+      <span className="mb-2 inline-flex h-11 w-11 items-center justify-center rounded-full bg-celebrate-200 text-celebrate-800 dark:bg-celebrate-800 dark:text-celebrate-100">
+        <GiftIcon className="h-6 w-6" />
+      </span>
+      <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+        Task {task.number} · Prize ready
+      </p>
+      <p className="mt-1 text-lg font-semibold text-slate-900 dark:text-slate-50">
+        Tap to reveal!
+      </p>
+    </button>
   ) : (
     <div className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-700 dark:bg-slate-800">
       <div className="flex items-start justify-between">

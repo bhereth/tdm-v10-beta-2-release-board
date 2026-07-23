@@ -75,7 +75,7 @@
     },
     {
       "number": 8,
-      "name": "Include summary post processing for Benefit-Cost Analysis pipeline",
+      "name": "Update commercial vehicle external forecasts based on new 2025 classifications",
       "description": "",
       "icon": "chat",
       "status": "IN_PROGRESS",
@@ -88,9 +88,9 @@
       "name": "Add voyager scripts to summarize highway network, OD Matrix, and SE for BCA",
       "description": "",
       "icon": "trophy",
-      "status": "IN_PROGRESS",
-      "revealed": false,
-      "revealedAt": null,
+      "status": "READY_TO_REVEAL",
+      "revealed": true,
+      "revealedAt": "2026-07-23T22:11:56.471Z",
       "prizeId": "20-minute-bonus-break"
     }
   ],

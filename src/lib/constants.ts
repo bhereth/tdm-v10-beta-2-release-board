@@ -68,7 +68,7 @@ export const INITIAL_TASKS: InitialTaskDef[] = [
   },
   {
     number: 8,
-    name: "Include summary post processing for Benefit-Cost Analysis pipeline",
+    name: "Update commercial vehicle external forecasts based on new 2025 classifications",
     description: "",
     icon: "chat",
   },

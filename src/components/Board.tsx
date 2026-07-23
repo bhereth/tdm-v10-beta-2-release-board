@@ -11,12 +11,12 @@ interface BoardProps {
   board: PublicBoardState;
 }
 
-// There's no server here, so "have you already seen this celebration"
+// There's no server here, so "has this visitor opened this tile yet"
 // lives in the visitor's own browser rather than in a database. Each
 // revealed task's `revealedAt` timestamp (and the board's overall
-// `completedAt`) is a stable, unique marker — once we've recorded having
-// shown the animation for a given timestamp, we won't replay it for that
-// same reveal on this device again, even across refreshes.
+// `completedAt`) is a stable, unique marker — once we've recorded that
+// this device opened a given reveal, it stays open (no flip animation)
+// on future visits, and never auto-opens before the visitor clicks it.
 const SEEN_REVEALS_KEY = "beta-release-challenge:seen-reveals";
 const SEEN_COMPLETION_KEY = "beta-release-challenge:seen-completion";
 const CELEBRATION_MS = 1600;
@@ -32,36 +32,34 @@ function loadSeenReveals(): Set<string> {
 
 export function Board({ board }: BoardProps) {
   const { tasks, prizes } = board;
+  const [openedRevealedAts, setOpenedRevealedAts] = useState<Set<string>>(
+    new Set()
+  );
   const [celebrateTaskNumbers, setCelebrateTaskNumbers] = useState<Set<number>>(
     new Set()
   );
   const [celebrateCompletion, setCelebrateCompletion] = useState(false);
 
   useEffect(() => {
-    const seenReveals = loadSeenReveals();
-    const newlyRevealed = new Set<number>();
-    for (const task of tasks) {
-      if (task.revealed && task.revealedAt && !seenReveals.has(task.revealedAt)) {
-        newlyRevealed.add(task.number);
-        seenReveals.add(task.revealedAt);
-      }
-    }
-    if (newlyRevealed.size === 0) return;
-
-    setCelebrateTaskNumbers(newlyRevealed);
-    window.localStorage.setItem(
-      SEEN_REVEALS_KEY,
-      JSON.stringify([...seenReveals])
-    );
-    const timeout = window.setTimeout(
-      () => setCelebrateTaskNumbers(new Set()),
-      CELEBRATION_MS
-    );
-    return () => window.clearTimeout(timeout);
-    // Only ever needs to run once, comparing the page's initial data
-    // against what this browser has already recorded seeing.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setOpenedRevealedAts(loadSeenReveals());
   }, []);
+
+  function handleOpenTask(taskNumber: number, revealedAt: string) {
+    setOpenedRevealedAts((prev) => {
+      if (prev.has(revealedAt)) return prev;
+      const next = new Set(prev).add(revealedAt);
+      window.localStorage.setItem(SEEN_REVEALS_KEY, JSON.stringify([...next]));
+      return next;
+    });
+    setCelebrateTaskNumbers((prev) => new Set(prev).add(taskNumber));
+    window.setTimeout(() => {
+      setCelebrateTaskNumbers((prev) => {
+        const next = new Set(prev);
+        next.delete(taskNumber);
+        return next;
+      });
+    }, CELEBRATION_MS);
+  }
 
   useEffect(() => {
     if (!board.completedAt) return;
@@ -87,7 +85,11 @@ export function Board({ board }: BoardProps) {
             <TaskCard
               key={task.number}
               task={task}
+              isOpen={Boolean(task.revealedAt && openedRevealedAts.has(task.revealedAt))}
               celebrate={celebrateTaskNumbers.has(task.number)}
+              onOpen={() => {
+                if (task.revealedAt) handleOpenTask(task.number, task.revealedAt);
+              }}
             />
           ))}
         </div>
