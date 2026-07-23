@@ -94,7 +94,14 @@ export function Board({ board }: BoardProps) {
           ))}
         </div>
 
-        <PrizePool prizes={prizes} />
+        <PrizePool
+          prizes={prizes.map((prize) => ({
+            ...prize,
+            revealed: Boolean(
+              prize.revealedAt && openedRevealedAts.has(prize.revealedAt)
+            ),
+          }))}
+        />
       </main>
 
       {board.completedAt && (
