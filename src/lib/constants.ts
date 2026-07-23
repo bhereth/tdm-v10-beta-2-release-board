@@ -87,43 +87,41 @@ export interface InitialPrizeDef {
 
 export const INITIAL_PRIZES: InitialPrizeDef[] = [
   {
-    name: "Snack Cart",
-    description: "A small selection of snacks for the team.",
+    name: "🍓 Fresh Fruit Basket",
+    description: "A fresh fruit basket for the team.",
   },
   {
-    name: "Coffee or Drink Run",
-    description:
-      "Basic coffee, soda, tea, or another simple drink for each team member.",
+    name: "🏓 4 vs. 4 Ping Pong Match",
+    description: "A friendly 4 vs. 4 ping pong match.",
   },
   {
-    name: "Afternoon Treat",
-    description:
-      "Cookies, donuts, brownies, ice cream, or a similar shared treat.",
-  },
-  {
-    name: "Bonus Break",
+    name: "☕ 20-Minute Bonus Break",
     description: "A scheduled 20-minute team break.",
   },
   {
-    name: "Extended Lunch",
-    description: "A slightly longer team lunch, subject to office approval.",
+    name: "🍪 Cookies",
+    description: "Fresh cookies for the team.",
   },
   {
-    name: "Team Trivia Break",
-    description: "A short office-friendly trivia game.",
-  },
-  {
-    name: "Choose the Next Team Treat",
-    description:
-      "The team member most closely associated with the completed task chooses the next simple shared treat.",
-  },
-  {
-    name: "Mystery Office Perk",
-    description: "One small preapproved perk selected from a short list.",
-  },
-  {
-    name: "Candy Bowl Restock",
+    name: "🍬 Candy Bowl Restock",
     description: "Restocking the office candy bowl with a fresh selection.",
+  },
+  {
+    name: "🥯 Bagels & Cream Cheese",
+    description: "Bagels and cream cheese for the team.",
+  },
+  {
+    name: "🌮 Chips & Salsa",
+    description: "Chips and salsa for the team.",
+  },
+  {
+    name: "🚶 Walking Meeting Outside",
+    description: "Take a team meeting outside instead.",
+  },
+  {
+    name: "🚆 FrontRunner Adventure",
+    description:
+      "Take FrontRunner somewhere for a group coordination meeting on the train.",
   },
 ];
 

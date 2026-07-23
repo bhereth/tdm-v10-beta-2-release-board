@@ -11,7 +11,7 @@
       "status": "IN_PROGRESS",
       "revealed": false,
       "revealedAt": null,
-      "prizeId": "afternoon-treat"
+      "prizeId": "walking-meeting-outside"
     },
     {
       "number": 2,
@@ -21,7 +21,7 @@
       "status": "IN_PROGRESS",
       "revealed": false,
       "revealedAt": null,
-      "prizeId": "team-trivia-break"
+      "prizeId": "frontrunner-adventure"
     },
     {
       "number": 3,
@@ -31,7 +31,7 @@
       "status": "IN_PROGRESS",
       "revealed": false,
       "revealedAt": null,
-      "prizeId": "extended-lunch"
+      "prizeId": "candy-bowl-restock"
     },
     {
       "number": 4,
@@ -41,7 +41,7 @@
       "status": "IN_PROGRESS",
       "revealed": false,
       "revealedAt": null,
-      "prizeId": "coffee-or-drink-run"
+      "prizeId": "4-vs-4-ping-pong-match"
     },
     {
       "number": 5,
@@ -51,7 +51,7 @@
       "status": "IN_PROGRESS",
       "revealed": false,
       "revealedAt": null,
-      "prizeId": "mystery-office-perk"
+      "prizeId": "cookies"
     },
     {
       "number": 6,
@@ -61,7 +61,7 @@
       "status": "IN_PROGRESS",
       "revealed": false,
       "revealedAt": null,
-      "prizeId": "snack-cart"
+      "prizeId": "fresh-fruit-basket"
     },
     {
       "number": 7,
@@ -71,7 +71,7 @@
       "status": "IN_PROGRESS",
       "revealed": false,
       "revealedAt": null,
-      "prizeId": "candy-bowl-restock"
+      "prizeId": "chips-salsa"
     },
     {
       "number": 8,
@@ -81,7 +81,7 @@
       "status": "IN_PROGRESS",
       "revealed": false,
       "revealedAt": null,
-      "prizeId": "choose-the-next-team-treat"
+      "prizeId": "bagels-cream-cheese"
     },
     {
       "number": 9,
@@ -91,59 +91,54 @@
       "status": "IN_PROGRESS",
       "revealed": false,
       "revealedAt": null,
-      "prizeId": "bonus-break"
+      "prizeId": "20-minute-bonus-break"
     }
   ],
   "prizes": [
     {
-      "id": "Prize 1",
-      "name": "",
-      "description": ""
+      "id": "fresh-fruit-basket",
+      "name": "🍓 Fresh Fruit Basket",
+      "description": "A fresh fruit basket for the team."
     },
     {
-      "id": "Prize 1",
-      "name": "",
-      "description": ""
+      "id": "4-vs-4-ping-pong-match",
+      "name": "🏓 4 vs. 4 Ping Pong Match",
+      "description": "A friendly 4 vs. 4 ping pong match."
     },
     {
-      "id": "Prize 2",
-      "name": "",
-      "description": ""
+      "id": "20-minute-bonus-break",
+      "name": "☕ 20-Minute Bonus Break",
+      "description": "A scheduled 20-minute team break."
     },
     {
-      "id": "Prize 3",
-      "name": "",
-      "description": ""
+      "id": "cookies",
+      "name": "🍪 Cookies",
+      "description": "Fresh cookies for the team."
     },
     {
-      "id": "Prize 4",
-      "name": "",
-      "description": ""
+      "id": "candy-bowl-restock",
+      "name": "🍬 Candy Bowl Restock",
+      "description": "Restocking the office candy bowl with a fresh selection."
     },
     {
-      "id": "Prize 5",
-      "name": "",
-      "description": ""
+      "id": "bagels-cream-cheese",
+      "name": "🥯 Bagels & Cream Cheese",
+      "description": "Bagels and cream cheese for the team."
     },
     {
-      "id": "Prize 6",
-      "name": "",
-      "description": ""
+      "id": "chips-salsa",
+      "name": "🌮 Chips & Salsa",
+      "description": "Chips and salsa for the team."
     },
     {
-      "id": "Prize 7",
-      "name": "",
-      "description": ""
+      "id": "walking-meeting-outside",
+      "name": "🚶 Walking Meeting Outside",
+      "description": "Take a team meeting outside instead."
     },
     {
-      "id": "Prize 8",
-      "name": "",
-      "description": ""
-    },
-    {
-      "id": "Prize 9",
-      "name": "",
-      "description": ""
+      "id": "frontrunner-adventure",
+      "name": "🚆 FrontRunner Adventure",
+      "description": "Take FrontRunner somewhere for a group coordination meeting on the train."
     }
   ],
   "mysteryPerkOptions": []
