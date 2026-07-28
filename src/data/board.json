@@ -8,10 +8,10 @@
       "name": "Review life cycle",
       "description": "",
       "icon": "checklist",
-      "status": "IN_PROGRESS",
-      "revealed": false,
-      "revealedAt": null,
-      "prizeId": "walking-meeting-outside"
+      "status": "READY_TO_REVEAL",
+      "revealed": true,
+      "revealedAt": "2026-07-28T16:35:43.811Z",
+      "prizeId": "cookies"
     },
     {
       "number": 2,
@@ -51,7 +51,7 @@
       "status": "IN_PROGRESS",
       "revealed": false,
       "revealedAt": null,
-      "prizeId": "cookies"
+      "prizeId": "walking-meeting-outside"
     },
     {
       "number": 6,
