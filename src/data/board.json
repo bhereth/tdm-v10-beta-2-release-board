@@ -28,9 +28,9 @@
       "name": "Implement preliminary phased RTP project network (MAG)",
       "description": "",
       "icon": "flag",
-      "status": "IN_PROGRESS",
-      "revealed": false,
-      "revealedAt": null,
+      "status": "READY_TO_REVEAL",
+      "revealed": true,
+      "revealedAt": "2026-07-30T18:59:23.000Z",
       "prizeId": "candy-bowl-restock"
     },
     {
@@ -78,9 +78,9 @@
       "name": "Update commercial vehicle external forecasts based on new 2025 classifications",
       "description": "",
       "icon": "chat",
-      "status": "IN_PROGRESS",
-      "revealed": false,
-      "revealedAt": null,
+      "status": "READY_TO_REVEAL",
+      "revealed": true,
+      "revealedAt": "2026-07-30T18:59:24.000Z",
       "prizeId": "bagels-cream-cheese"
     },
     {
