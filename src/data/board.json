@@ -58,9 +58,9 @@
       "name": "Create draft socioeconomic forecast (WFRC)",
       "description": "",
       "icon": "book",
-      "status": "IN_PROGRESS",
-      "revealed": false,
-      "revealedAt": null,
+      "status": "READY_TO_REVEAL",
+      "revealed": true,
+      "revealedAt": "2026-08-04T15:57:08.000Z",
       "prizeId": "fresh-fruit-basket"
     },
     {
