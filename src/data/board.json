@@ -38,9 +38,9 @@
       "name": "Calibrate CVM",
       "description": "",
       "icon": "wrench",
-      "status": "IN_PROGRESS",
-      "revealed": false,
-      "revealedAt": null,
+      "status": "READY_TO_REVEAL",
+      "revealed": true,
+      "revealedAt": "2026-08-05T17:43:30.847Z",
       "prizeId": "4-vs-4-ping-pong-match"
     },
     {
