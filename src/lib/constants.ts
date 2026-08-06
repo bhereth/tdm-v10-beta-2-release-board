@@ -87,8 +87,8 @@ export interface InitialPrizeDef {
 
 export const INITIAL_PRIZES: InitialPrizeDef[] = [
   {
-    name: "🍓 Fresh Fruit Basket",
-    description: "A fresh fruit basket for the team.",
+    name: "🍓 Fresh Fruit Plate",
+    description: "A fresh fruit plate for the team.",
   },
   {
     name: "🏓 4 vs. 4 Ping Pong Match",
