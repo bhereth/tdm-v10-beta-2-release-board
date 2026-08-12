@@ -48,9 +48,9 @@
       "name": "Create preliminary socioeconomic forecast (MAG)",
       "description": "",
       "icon": "book",
-      "status": "IN_PROGRESS",
-      "revealed": false,
-      "revealedAt": null,
+      "status": "READY_TO_REVEAL",
+      "revealed": true,
+      "revealedAt": "2026-08-12T18:06:44.738Z",
       "prizeId": "walking-meeting-outside"
     },
     {
