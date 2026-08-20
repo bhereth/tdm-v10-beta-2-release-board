@@ -68,9 +68,9 @@
       "name": "Final beta calibration and validation",
       "description": "",
       "icon": "shield",
-      "status": "IN_PROGRESS",
-      "revealed": false,
-      "revealedAt": null,
+      "status": "READY_TO_REVEAL",
+      "revealed": true,
+      "revealedAt": "2026-08-20T17:49:54.898Z",
       "prizeId": "chips-salsa"
     },
     {
