@@ -18,9 +18,9 @@
       "name": "Implement preliminary phased RTP project network (WFRC)",
       "description": "",
       "icon": "flag",
-      "status": "IN_PROGRESS",
-      "revealed": false,
-      "revealedAt": null,
+      "status": "READY_TO_REVEAL",
+      "revealed": true,
+      "revealedAt": "2026-08-31T19:25:14.282Z",
       "prizeId": "frontrunner-adventure"
     },
     {
